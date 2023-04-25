@@ -234,6 +234,8 @@ void Error_Handler(void)
  
  
  ## CIRCUIT DIAGRAM (EXPORT THE GRAPHICS TO PDF AND ADD THE SCREEN SHOT HERE): 
+ ![image](https://user-images.githubusercontent.com/94911373/234244521-f6dbe07c-cdf9-4486-a512-54841b4dbbfd.png)
+
  
  
 ## Result :
