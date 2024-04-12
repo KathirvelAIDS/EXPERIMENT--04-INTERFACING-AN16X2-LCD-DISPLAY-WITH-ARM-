@@ -306,7 +306,7 @@ LCD ON:
 
 
 
-![image](https://github.com/KathirvelAIDS/EXPERIMENT--04-INTERFACING-AN16X2-LCD-DISPLAY-WITH-ARM-/assets/94911373/dd472016-188e-413a-b0cd-ff49066db408)
+
 
 
 
