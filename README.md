@@ -180,6 +180,7 @@ REG NO:212221230047
 
 
 ```
+
 #include "main.h"
 #include "lcd.h"
 
@@ -188,37 +189,50 @@ static void MX_GPIO_Init(void);
 
 int main(void)
 {
-   HAL_Init();
+ 
+  HAL_Init();
 
-   SystemClock_Config();
 
-   MX_GPIO_Init();
-   Lcd_PortType ports[] = { GPIOA, GPIOA, GPIOA, GPIOA };
-     Lcd_PinType pins[] = {GPIO_PIN_3, GPIO_PIN_2, GPIO_PIN_1, GPIO_PIN_0};
-     Lcd_HandleTypeDef lcd;
-     lcd = Lcd_create(ports, pins, GPIOB, GPIO_PIN_0, GPIOB, GPIO_PIN_1, LCD_4_BIT_MODE);
-     Lcd_cursor(&lcd, 0,1);
-     Lcd_string(&lcd, "Sneha Basyal M");
+  SystemClock_Config();
 
-   while (1)
-   {
-      for ( int x = 1; x <= 200 ; x++ )
-      {
-         Lcd_cursor(&lcd, 1,7);
-         Lcd_int(&lcd, x);
-         HAL_Delay (1000);
-      }
-   }
+  
+  MX_GPIO_Init();
+  
+  Lcd_PortType ports[] = {GPIOA,GPIOA,GPIOA,GPIOA};
 
+  Lcd_PinType pins[] = {GPIO_PIN_3,GPIO_PIN_2,GPIO_PIN_1,GPIO_PIN_0};
+
+  Lcd_HandleTypeDef lcd;
+
+  lcd = Lcd_create(ports,pins,GPIOB,GPIO_PIN_0,GPIOB,GPIO_PIN_1,LCD_4_BIT_MODE);
+
+  Lcd_cursor(&lcd, 0,0);
+
+  Lcd_string(&lcd, "PRANAV AJ\n");
+
+  Lcd_cursor(&lcd, 1,2);
+
+  Lcd_string(&lcd, "212222230107");
+
+  HAL_Delay(500);
+ 
+  while (1)
+  {
+    
+  }
+  
 }
+
+
 void SystemClock_Config(void)
 {
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
 
+ 
   __HAL_RCC_PWR_CLK_ENABLE();
   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE2);
-
+  
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
@@ -240,27 +254,29 @@ void SystemClock_Config(void)
     Error_Handler();
   }
 }
+
+
 static void MX_GPIO_Init(void)
 {
   GPIO_InitTypeDef GPIO_InitStruct = {0};
 
+  
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
-  
+
   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3, GPIO_PIN_RESET);
 
-  
   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0|GPIO_PIN_1, GPIO_PIN_RESET);
 
-  
+ 
   GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  
+ 
   GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_1;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
@@ -268,21 +284,27 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
 }
+
+
 void Error_Handler(void)
 {
-   __disable_irq();
+ 
+  __disable_irq();
   while (1)
   {
   }
+ 
 }
-##ifdef  USE_FULL_ASSERT
+
+#ifdef  USE_FULL_ASSERT
 
 void assert_failed(uint8_t *file, uint32_t line)
 {
-
+ 
 }
-
 #endif 
+
+
 ```
 
 
@@ -293,16 +315,7 @@ void assert_failed(uint8_t *file, uint32_t line)
 
 
 
-LCD OFF:
-
-
-
-![image](https://github.com/KathirvelAIDS/EXPERIMENT--04-INTERFACING-AN16X2-LCD-DISPLAY-WITH-ARM-/assets/94911373/3a556cdf-2f22-4f39-89e0-2bccbaea5ec6)
-
-
-
-
-LCD ON:
+![image](https://github.com/KathirvelAIDS/EXPERIMENT--04-INTERFACING-AN16X2-LCD-DISPLAY-WITH-ARM-/assets/94911373/a564929b-aec4-4d4f-adba-63199dc2fb1e)
 
 
 
@@ -316,9 +329,8 @@ LCD ON:
  ## CIRCUIT DIAGRAM (EXPORT THE GRAPHICS TO PDF AND ADD THE SCREEN SHOT HERE): 
 
 
+![image](https://github.com/KathirvelAIDS/EXPERIMENT--04-INTERFACING-AN16X2-LCD-DISPLAY-WITH-ARM-/assets/94911373/a9a8d1a6-5828-42f4-af14-1a35b9aef4a6)
 
-
-![image](https://github.com/KathirvelAIDS/EXPERIMENT--04-INTERFACING-AN16X2-LCD-DISPLAY-WITH-ARM-/assets/94911373/ec42c430-0153-443b-9d63-57f959eed0f9)
 
  
  
