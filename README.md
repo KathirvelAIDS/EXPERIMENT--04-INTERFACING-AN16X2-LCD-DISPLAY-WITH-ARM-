@@ -315,8 +315,13 @@ void assert_failed(uint8_t *file, uint32_t line)
 
 
 
-![image](https://github.com/KathirvelAIDS/EXPERIMENT--04-INTERFACING-AN16X2-LCD-DISPLAY-WITH-ARM-/assets/94911373/a564929b-aec4-4d4f-adba-63199dc2fb1e)
+![322355705-d8e1abc2-fb7d-410d-9fbc-b751ef933467](https://github.com/KathirvelAIDS/EXPERIMENT--04-INTERFACING-AN16X2-LCD-DISPLAY-WITH-ARM-/assets/94911373/ec8a0454-2f7a-4f55-bec0-2b9f001d522c)
 
+
+LCD ON:
+
+
+![328091386-bda795c5-dc2e-4776-b3c7-6eecbc315946](https://github.com/KathirvelAIDS/EXPERIMENT--04-INTERFACING-AN16X2-LCD-DISPLAY-WITH-ARM-/assets/94911373/ff2eb5d9-b6a8-45df-a19b-510ced33aca3)
 
 
 
@@ -329,7 +334,9 @@ void assert_failed(uint8_t *file, uint32_t line)
  ## CIRCUIT DIAGRAM (EXPORT THE GRAPHICS TO PDF AND ADD THE SCREEN SHOT HERE): 
 
 
-![image](https://github.com/KathirvelAIDS/EXPERIMENT--04-INTERFACING-AN16X2-LCD-DISPLAY-WITH-ARM-/assets/94911373/a9a8d1a6-5828-42f4-af14-1a35b9aef4a6)
+
+![322355753-9a589b77-8d23-4ab8-9e96-1c96ccf10ec9](https://github.com/KathirvelAIDS/EXPERIMENT--04-INTERFACING-AN16X2-LCD-DISPLAY-WITH-ARM-/assets/94911373/55cae698-1218-4707-aa24-71655e535d96)
+
 
 
  
